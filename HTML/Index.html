@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="go-home">GO HOME</a>
+    </header>
+    <main>
+    <section>
+        <div class="fecha/hora">Fecha y hora</div>
+        <div id="zona-horaria">Elegir zona horaria</div>
+        <p>Frases aleatorias</p>
+    </section>
+    <section>
+        <h2>Crea tu contraseña segura🔒</h2>
+        <div class="container-gral" id="container-gral">
+            <div class="character-selector">
+                <label for="anchor-pass" class="form-label">Número de caracteres</label>
+                <input type="number" id="anchor-pass" class="form-control" min="12" max="50">
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkbox1">
+                <label class="check-label" for="checkbox1">Incluir números</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox2">
+                <label class="check-label" for="checkbox2">Incluir símbolos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox3">
+                <label class="check-label" for="checkbox1">Incluir mayúsculas</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox2">
+                <label class="check-label" for="checkbox4">Incluir minúsculas</label>
+                </div>
+            <div class="contraseña-generada">
+            <span id="contraseña-generada" class="contraseña-exitosa"></span>
+            </div> 
+        
+            <button id="btn-generador">Generar contraseña</button>
+        </div>
+    </section>
+    <section>
+        <div id="links-favoritos">
+            <h2>Añadí tu enlace de interes</h2>
+            <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
+                <br>
+                <br>
+            <input type="url" id="url" placeholder="Pega la URL"/>
+                <br>
+                <br>
+            <button id="añadir-enlace">Añadir enlace</button>
+            <ul id="link-lista"></ul>
+        </div>
+    </section>
+    <section>
+        <nav>
+
+        </nav>
+    </section>
+    
+    </main>
+    
+</body>
+</html>
