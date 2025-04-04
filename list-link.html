@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     
     <title>Listado de links</title>
 </head>
 <body>
-     <section>
+    
+    <header>
+        <a href="go-home">🏠</a>
+    </header>
+  
+    <section>
         <div id="links-favoritos">
-            <h2>Añadí tu enlace de interes</h2>
+            <h2>Añadí tu enlace de interes🔗</h2>
             <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
-                <br>
-                <br>
+            <br>
+            <br>
             <input type="url" id="url" placeholder="Pega la URL"/>
-                <br>
-                <br>
+            <br>
+            <br>
             <button id="añadir-enlace">Añadir enlace</button>
             <ul id="link-lista"></ul>
         </div>
     </section>
+
+    <footer>
+     <ul>
+         <li><a href="#" id="fecha&hora">🕐</a></li>
+         <li><a href="#" id="list-link">🔗</a></li>
+         <li><a href="#" id="password">🔒</a></li>
+         <li><a href="#" id="clima">☁️</a></li>
+     </ul>
+    </footer>
     <script src="list-links.js"></script>  
 </body>
 </html>

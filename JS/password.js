@@ -1,9 +1,4 @@
-//Tendrá entre 12 caracteres como mínimo y 50 de máximo.
-//Se podrá elegir el número de caracteres
-//Se compondrá de mayúsculas, minúsculas, números y símbolos. Mínimo una de cada.
-//- Guarda cada uno de los datos (mayúsculas, minúsculas, símbolos y núemeros) en una variable para poder recorrerlos.
-//Usa bucles y condicionales
-//`Math.random()` Para generar aleatoriedad
+
 const letrasMayMin = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const passNúmeros = "0123456789";
 const passSímbolos = "!@#$%^&*()-_=+";
