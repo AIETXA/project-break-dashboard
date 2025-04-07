@@ -1,0 +1,98 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Lexend Giga", sans-serif;
+    background-color: rgba(127, 255, 212, 0.811);
+   
+}
+
+section {
+    background-color: rgba(137, 43, 226, 0.192);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    width: 500px;
+    padding-bottom: 15px;
+}
+
+header {
+    width: 100px;
+    border: 1.5px black solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgba(201, 249, 245, 0.363);
+    margin: 20px;
+    padding: 10px;
+
+}
+
+header a {
+    color: rgb(124, 126, 126);
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+#anchor-pass {
+    width: 35px;
+    height: 25px;
+    margin: 3px;
+    padding: 3px;
+
+}
+
+div #check {
+display: flex;
+flex-direction: row;
+font-size: 18px;
+justify-content: center;
+padding-top: 15px;
+gap: 8px;
+
+
+}
+
+div .contraseña-generada {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 15px;
+    padding: 25px;
+    border: 2px white solid;
+    border-radius: 9px;
+
+}
+
+.contraseña-exitosa {
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.character-selector {
+    font-size: 20px;
+    margin: 10px;
+}
+
+#btn-generador {
+    padding: 10px;
+    margin-top: 8px;
+    background-color: bisque;
+    border-radius: 3px;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px black;
+    
+
+}
+ul {
+    display: flex;
+    gap: 15px;
+    background-color: red;
+    list-style-type: none;
+    
+}
+
+li a {
+    text-decoration: none;
+    
+}
