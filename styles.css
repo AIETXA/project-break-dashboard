@@ -8,11 +8,12 @@ body {
     transition: background-image 1s ease-in-out;
     height: 100vh;
     width: 100vh;
-      
+    
 }
 
 section {
-    background-color: rgba(137, 43, 226, 0.192);
+    
+    color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -82,7 +83,7 @@ div .contraseña-generada {
 #btn-generador {
     padding: 10px;
     margin-top: 8px;
-    background-color: bisque;
+    background-color: #8896a0a4;
     border-radius: 3px;
     font-size: 18px;
     box-shadow: 3px 3px 3px black;

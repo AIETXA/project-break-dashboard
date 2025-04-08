@@ -8,7 +8,33 @@
 //Cuando se carga la página el dato del `LocalStorage` deberá aparecer de inicio
 
 
-let nombreURL = document.getElementById("name-url");
-let direccionURL = document.getElementById("url");
+let nombreURL = document.getElementById("name-url").value;
+let direccionURL = document.getElementById("url").value;
+const listaLinks = document.getElementById("link-lista");
 const btnAñadirEnlace = document.getElementById("añadir-enlace");
 
+
+btnAñadirEnlace.addEventListener('submit', function() {
+localStorage.setItem('nombre', nombreURL)
+localStorage.setItem('url', direccionURL)
+listaLinks.innerHTML = `${localStorage.getItem('nombre')}<br>${localStorage.get('url')}`
+
+});
+
+console.log(localStorage.getItem('url'));
+
+/*let linksLike = localStorage.getItem('url')
+function addLinks() {
+    url ++
+    listaLinks.innerHTML = url
+
+}
+addLinks();
+    
+window.onload = function() {
+    if (localStorage.getItem('nombre') && localStorage.getItem('url')) {
+        document.getElementById('datosAlmacenados').innerHTML = 
+            `Nombre: ${localStorage.getItem('nombre')}<br>URL: ${localStorage.getItem('url')}`;
+    }
+};
+*/
