@@ -2,8 +2,10 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Lexend Giga", sans-serif;
-    background-color: rgba(127, 255, 212, 0.811);
-   
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    height: 100vh;
 }
 
 section {
