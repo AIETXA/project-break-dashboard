@@ -1,5 +1,18 @@
-const imagenesFondo = [img/1.jpg, img/2.jpg, IMG/3.JPG, IMG\4.JPG, IMG\5.JPG, IMG\6.JPG, IMG\7.JPG, IMG\8.JPG, IMG\9.JPG, IMG\10.JPG, IMG\11.JPG, IMG\12.JPG, IMG\13.JPG, IMG\14.JPG, IMG\15.JPG, IMG\16.JPG, IMG\17.JPG, IMG\18.JPG, IMG\19.JPG, IMG\20.JPG, IMG\21.JPG, IMG\22.JPG, IMG\23.JPG, IMG\24.JPG, IMG\25.JPG]
-console.log(0);
+const imagenesFondo = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/6.jpg', 'img/8.jpg', 'img/9.jpg', 'img/10.jpg', 'img/11.jpg', 'img/12.jpg', 'img/13.jpg', 'img/14.jpg', 'img/15.jpg', 'img/16.jpg', 'img/17.jpg', 'img/18.jpg', 'img/19.jpg', 'img/20.jpg', 'img/21.jpg', 'img/22.jpg', 'img/23.jpg', 'img/24.jpg', 'img/25.jpg'];
 
+let indiceInicial = 0;
+function imagenesInicio() {
+   document.body.style.backgroundImage = `url('${imagenesFondo[indiceInicial]}')`;
+indiceInicial = (indiceInicial + 1) % imagenesFondo.length;
+}
 
-//`document.body.style.backgroundImage = "url('mi-imagen.jpg')"`
+setInterval(imagenesInicio, 5000);
+
+imagenesInicio();
+
+// funcion asociada al click en el link de la pagina 
+/*  function imgRandom() {
+    aca tengo que invocar el click para que empiece la funcion a trabajar
+    const pagina = Math.floor(Math.random() * imagenesFondo.length);
+    document.body.style.backgroundImage = `url('${imagenesFondo[pagina]}')`;
+    */
