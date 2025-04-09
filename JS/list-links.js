@@ -8,33 +8,45 @@
 //Cuando se carga la página el dato del `LocalStorage` deberá aparecer de inicio
 
 
-let nombreURL = document.getElementById("name-url").value;
-let direccionURL = document.getElementById("url").value;
+
 const listaLinks = document.getElementById("link-lista");
 const btnAñadirEnlace = document.getElementById("añadir-enlace");
+const eliminar = document.getElementById('eliminar');
 
+let nombreUrl = document.getElementById("name-url");
+let direccionUrl = document.getElementById("url");
 
-btnAñadirEnlace.addEventListener('submit', function() {
-localStorage.setItem('nombre', nombreURL)
-localStorage.setItem('url', direccionURL)
-listaLinks.innerHTML = `${localStorage.getItem('nombre')}<br>${localStorage.get('url')}`
+btnAñadirEnlace.addEventListener('click', () => {
+    const nombre = nombreUrl.value.trim();
+    const direccion = direccionUrl.value.trim();
 
-});
-
-console.log(localStorage.getItem('url'));
-
-/*let linksLike = localStorage.getItem('url')
-function addLinks() {
-    url ++
-    listaLinks.innerHTML = url
+if(!nombre || !direccion) {
+    alert('Campos obligatorios');
+return;
 
 }
-addLinks();
-    
-window.onload = function() {
-    if (localStorage.getItem('nombre') && localStorage.getItem('url')) {
-        document.getElementById('datosAlmacenados').innerHTML = 
-            `Nombre: ${localStorage.getItem('nombre')}<br>URL: ${localStorage.getItem('url')}`;
-    }
-};
-*/
+
+let li = document.createElement('li');
+li.innerHTML = `<a href="${direccion}" target="_blank">${nombre}<eliminar></a>`;
+listaLinks.appendChild(li);
+});
+
+
+function misLinks() {
+    return JSON.parse(localStorage.getItem('links')) || [];
+}
+
+function guardarLinks(links) {
+    localStorage.setItem('links', JSON.stringify(links));
+}
+
+function addLinks(links) {
+    listaLinks.innerHTML += template(links);
+    let link = [];
+    links.push(link);
+    guardarLinks(links);
+}
+
+eliminar.addEventListener('click', () => {
+    localStorage.removeItem(link)
+})

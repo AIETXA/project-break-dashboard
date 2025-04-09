@@ -148,3 +148,7 @@ _____________________________________________
 - Línea que se escribe, programa que se prueba. console.log() para todo. Es más fácil solucionar paso a paso que hacer ingeniería inversa.
 - Las rutas que se escriben para las imagens que hagamos dentro de nuestros JS, cuando renderizan es probable que de error cuando esté subida a `github pages`. Revisa tus rutas relativas `./` o `../`
 - Usa internet para buscar soluciones. No las copies, entiendelás y hazlas tuyas.
+
+
+
+
