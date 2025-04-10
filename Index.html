@@ -12,14 +12,29 @@
 <body>
 
     <section>
-        <div class="fecha-hora">Fecha y hora</div>
+      <div class="contenedor-fechaYhora">
+        <div id="fecha-hora">Fecha y hora</div>
         <div id="zona-horaria">Elegir zona horaria</div>
         <p>Frases aleatorias</p>
+      </div>
     </section>
-    
     <section>
-        <h2>Crea tu contraseña segura🔒</h2>
+        <div id="links-favoritos">
+            <h2>Añadí tu enlace de interes🔗</h2>
+            <form>
+                <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
+                <br><br>
+                <input type="url" id="url" placeholder="Pega la URL"/>
+                 <br><br>
+            </form>
+            <button id="añadir-enlace">Añadir enlace</button>
+            <ul id="link-lista"></ul>
+            <button class="eliminar"></button>
+        </div>
+    </section>
+    <section>
         <div class="container-gral" id="container-gral">
+        <h2>Crea tu contraseña segura🔒</h2>
             <div class="character-selector">
                 <label for="anchor-pass" class="form-label">Número de caracteres</label>
                 <input type="number" id="anchor-pass" class="form-control" min="12" max="50">
@@ -53,7 +68,7 @@
     </ul>
 </footer>
 <hr>
-   
+   <script src="./JS/list-links.js"></script>
    <script src="./JS/password.js"></script>
    <script src="script.js"></script>
 
