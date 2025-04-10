@@ -12,9 +12,9 @@
 const listaLinks = document.getElementById("link-lista");
 const btnAñadirEnlace = document.getElementById("añadir-enlace");
 const eliminar = document.getElementById('eliminar');
-
 let nombreUrl = document.getElementById("name-url");
 let direccionUrl = document.getElementById("url");
+
 
 btnAñadirEnlace.addEventListener('click', () => {
     const nombre = nombreUrl.value.trim();
@@ -25,9 +25,8 @@ if(!nombre || !direccion) {
 return;
 
 }
-
 let li = document.createElement('li');
-li.innerHTML = `<a href="${direccion}" target="_blank">${nombre}<eliminar></a>`;
+li.innerHTML = `<a href="${direccion}" target="_blank">${nombre}</a>`;
 listaLinks.appendChild(li);
 });
 
@@ -48,5 +47,8 @@ function addLinks(links) {
 }
 
 eliminar.addEventListener('click', () => {
-    localStorage.removeItem(link)
+    localStorage.setItem('links', 0)
+    listaLinks.innerHTML = links;
 })
+
+localStorage.setItem('links')
