@@ -11,11 +11,12 @@
 
 const listaLinks = document.getElementById("link-lista");
 const btnAñadirEnlace = document.getElementById("añadir-enlace");
-const eliminar = document.getElementById('eliminar');
+const eliminar = document.querySelector('eliminar');
 let nombreUrl = document.getElementById("name-url");
 let direccionUrl = document.getElementById("url");
 
 
+window.addEventListener("DOMContentLoaded", mostrarLinksGuardados);
 btnAñadirEnlace.addEventListener('click', () => {
     const nombre = nombreUrl.value.trim();
     const direccion = direccionUrl.value.trim();
@@ -25,30 +26,57 @@ if(!nombre || !direccion) {
 return;
 
 }
-let li = document.createElement('li');
-li.innerHTML = `<a href="${direccion}" target="_blank">${nombre}</a>`;
-listaLinks.appendChild(li);
+const link = {nombre, direccion};
+agregarLinksAlDOM(link);
+guardarLinks(link);
+
+
+nombreUrl.value = '';
+direccionUrl.value = '';
+
 });
 
 
-function misLinks() {
-    return JSON.parse(localStorage.getItem('links')) || [];
+function agregarLinksAlDOM(link) { 
+    let li = document.createElement('li');
+    li.innerHTML = `<a href="${link.direccion}" target="_blank">${link.nombre}</a>
+    <button class="eliminar">x</button>`;
+
+const eliminarBtn = li.querySelector('.eliminar');
+    if (eliminarBtn) {
+        eliminarBtn.addEventListener('click', () => {
+            console.log('Eliminando el link:', link);
+            eliminarLink(link);
+            li.remove();
+        });
+    } else {
+        console.error('No se pudo encontrar el botón de eliminar')
+    }
+
+ listaLinks.appendChild(li);
 }
 
-function guardarLinks(links) {
+function mostrarLinksGuardados() {
+    const links = misLinksEnStorage();
+    links.forEach(agregarLinksAlDOM);
+}
+
+function guardarLinks(link) {
+    const links = misLinksEnStorage();
+    links.push(link);
     localStorage.setItem('links', JSON.stringify(links));
 }
 
-function addLinks(links) {
-    listaLinks.innerHTML += template(links);
-    let link = [];
-    links.push(link);
-    guardarLinks(links);
+   function eliminarLink(linkAeliminar) {
+    let linksGuardados = misLinksEnStorage();
+    let linksActualizados = linksGuardados.filter(link => {
+        const nombreIgual = link.nombre === linkAeliminar.nombre;
+        const direccionIgual = link.direccion ===linkAeliminar.direccion;
+        return !(nombreIgual && direccionIgual)
+    });
+localStorage.setItem('links', JSON.stringify(linksActualizados));
 }
-
-eliminar.addEventListener('click', () => {
-    localStorage.setItem('links', 0)
-    listaLinks.innerHTML = links;
-})
-
-localStorage.setItem('links')
+   
+function misLinksEnStorage() {
+    return JSON.parse(localStorage.getItem('links')) || [];
+}
