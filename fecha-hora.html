@@ -7,7 +7,7 @@
     
     <title>Fecha y Hora</title>
 </head>
-<body onload='horarioActual()'>
+<body>
  
     <header>
         <a href="go-home">🏠</a>
@@ -15,8 +15,25 @@
   
     <section>
       
-        <div class="fecha-hora">Fecha y hora</div>
-        <div id="zona-horaria">Elegir zona horaria</div>
+      <div class="fecha">
+          <p id="dia"></p>
+          <p id="numero"></p>
+          <p>de</p>
+          <p id="mes"></p>
+          <p>de</p>
+          <p id="año"></p>
+        </div>
+        <div class="reloj">
+          <p id="horas"></p>
+          <p>:</p>
+          <p id="minutos"></p>
+          <p>:</p>
+        <div class="caja-segundos-ampm">
+          <p id="segundos"></p>
+          <p id="am-pm"></p>
+        </div>
+      </div>
+        <div id="zona-horaria"></div>
       
     <p>Frases aleatorias</p>
     </section>
