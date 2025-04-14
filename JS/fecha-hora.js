@@ -12,7 +12,7 @@ let momentoActual = new Date();
     numeros = momentoActual.getDate();
     mes = momentoActual.getMonth();
     año = momentoActual.getFullYear();
-    ampm = '';
+   
     
     pDia = document.getElementById('dia');
     pNumero = document.getElementById('numero');
@@ -20,7 +20,6 @@ let momentoActual = new Date();
     pAño = document.getElementById('año');
     pHoras = document.getElementById('horas');
     pMinutos = document.getElementById('minutos');
-    pAMPM = document.getElementById('am-pm');
     pSegundos = document.getElementById('segundos');
     
 const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado'];
@@ -32,18 +31,12 @@ const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', '
 pMes.textContent = meses[mes];
 pAño.textContent = año;
 
-if (hora >= 12) {
-    hora = hora - 12;
-    ampm = 'PM';
-} else {
-    ampm = 'AM';
-}
-
-if (hora == 0) {
-    hora = 12;
+if (hora < 10) {
+    hora = '0' + hora
 };
+
 pHoras.textContent = hora;
-pAMPM.textContent = ampm;
+
 
 if (minutos < 10) {
     minutos = '0' + minutos
@@ -57,5 +50,36 @@ pSegundos.textContent = segundos;
  
 };
 
+actualizarReloj();
+setInterval(actualizarReloj, 1000);
+
+
+
+ let frasesPum = document.getElementById('Frases');
+  function frasesMotivadoras() {
+     
+    if (hora > 7 && hora <= 12) {
+        frasesPum.innerText = ('Buenos días, desayuna fuerte y a darle al código')
+    }  
+    if (hora > 12 && hora <= 14) {
+        frasesPum.innerText = ('Echa un rato más pero no olvides comer!') 
+    }
+    if (hora > 14 && hora <= 16) {
+        frasesPum.innerText = ('Espero que hayas comido')
+    }
+    if (hora > 16 && hora <= 18) {
+        frasesPum.innerText = ('¡Buenas tardes!, el último empujón')
+    }
+    if (hora > 18 && hora >= 22) {
+        frasesPum.innerText = ('Esto ya son horas extras, ... piensa en parar pronto')
+    }
+    if (hora > 22 && hora <= 24) {
+        frasesPum.innerText = ('Buenas noches, es hora de parar y descansar')
+    }
+    if (hora > 0 && hora <= 7) {
+        frasesPum.innerText = ('Es hora de descansar. Apaga y sigue mañana')
+    }
+}
+frasesMotivadoras();
 actualizarReloj();
 setInterval(actualizarReloj, 1000);
