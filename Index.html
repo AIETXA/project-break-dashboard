@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <section>
-      
+    <section id="reloj-fechayhora">
         <div class="fecha">
             <p id="dia"></p>
             <p id="numero"></p>
@@ -19,34 +18,53 @@
             <p id="mes"></p>
             <p>de</p>
             <p id="año"></p>
-          </div>
-          <div class="reloj">
+        </div>
+        <div class="reloj">
             <p id="horas"></p>
             <p>:</p>
             <p id="minutos"></p>
             <p>:</p>
             <p id="segundos"></p>
-          </div>
         </div>
-          <div id="zona-horaria"></div>
+        
+       
         
       <p id="Frases"></p>
     </section>
-    
-    <section>
+
+
+    <section id="el-tiempo">
+      <div class="localizacion"> 
+        <p>Mi ubicación</p>
+        <h1 id="ubicacion"></h1>
+        <p id="zona"></p>
+      </div>
+        <div class="container-tiempo">
+            <p>Temperatura: <span id="temperatura"></span>°C</p>
+            <p>Humedad: <span id="humedad"></span>%</p>
+            <p>Condiciones: <span id="condiciones"></span></p>
+        </div>
+        <p>Pronostico para las próximas horas</p>
+        <div id="prevision-horas" class="container-prevision"></div>
+    </section>
+
+
+    <section id="mi-lista-links">
         <div id="links-favoritos">
             <h2>Añadí tu enlace de interes🔗</h2>
             <form>
                 <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
                 <br><br>
                 <input type="url" id="url" placeholder="Pega la URL"/>
-                 <br><br>
+                <br><br>
             </form>
             <button id="añadir-enlace">Añadir enlace</button>
             <ul id="link-lista"></ul>
             <button class="eliminar"></button>
         </div>
     </section>
+
+
     <section>
         <div class="container-gral" id="container-gral">
         <h2>Crea tu contraseña segura🔒</h2>
@@ -54,7 +72,6 @@
                 <label for="anchor-pass" class="form-label">Número de caracteres</label>
                 <input type="number" id="anchor-pass" class="form-control" min="12" max="50">
             </div>
-
             <div>
                 <input type="checkbox" id="checkbox1">
                 <label class="check-label" for="checkbox1">Incluir números</label>
@@ -66,7 +83,6 @@
             
             <div class="contraseña-generada">
                 <span id="contraseña-generada" class="contraseña-exitosa"></span>
-               
             </div>
 
         <button id="btn-generador">Generar contraseña</button>
@@ -83,6 +99,7 @@
     </ul>
 </footer>
 <hr>
+   <script src="./JS/elTiempo.js"></script>
    <script src="./JS/fecha-hora.js"></script>
    <script src="./JS/list-links.js"></script>
    <script src="./JS/password.js"></script>
