@@ -1,37 +1,61 @@
-/*El tiempo en el momento en el que accedemos a la página con varios elementos:
-  - Ciudad y Pais. Pondremos la ciudad y País en el que nos encontramos.
-  - El estado del clima.
-  - Imagen y grados celsius de nuestra ciudad.
-  - Precipitaciones, humedad y viento km/h.
-- La previsión por horas en el día en el que estamos. Con su hora, imagen y grados celsius. 
 
 
-¿Qué usaremos?
-- API del tiempo de `https://www.weatherapi.com/`
-- Necesitarás una API KEY. Podrás conseguirla entrando en la url de weatherapi y pulsando en signup. Rellena los datos que pide y nada más entrar os aparecerá esa API KEY.
-- Puedes probar que funciona en esta página: `https://www.weatherapi.com/api-explorer.aspx` metiendo la APIKEY y dándole al botón de `show response`
-- Aquí está la documentación completa `https://www.weatherapi.com/docs/`
-- Este es el `base URL` al que tendréis que acceder `http://api.weatherapi.com/v1` añadiremos detrás lo que necesitemos. 
- - Este es un ejemplo de endpoint con la APIKEY y la ciudad. Solo habría que cambiar los datos de `${apiKey}` por la nuestra y `${ciudad}` por la elegida por nosotros `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no`
-- `fetch` para hacer peticiones a la API.
 
-### PISTAS Y CONSEJOS
-- La URL base es `http` cámbiala desde el inicio por `https` para no tener problemas en el futuro de bloqueos de seguridad.
-- Usa `promesas` o `ASYNC/AWAIT` para crear la asincronía en las peticiopnes `fetch`
-- Piensa si necesitas solo un endpoint o varios. Revisa que trae cada petición.
-- Estructura bien tu código */
+const apiKey = '22c3d1fc3de64ad5bec60312251504';
+const city = 'Mondragon, Pais Vasco';
+const apiUrl = `http://api.weatherapi.com/v1/current.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&aqi=no&lang=es`;
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://api.weatherapi.com/v1/current.json?key=&q=ARRASATE-MONDRAGON&aqi=no')
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const temperatura = data.main.temp;
-            const humedad = data.main.humidity;
-            const condiciones = data.weather[0].description;
+            const ubicacion = data.location.name;
+            const zona = data.location.region;
+            const temperatura = data.current.temp_c;
+            const humedad = data.current.humidity;
+            const condiciones = data.current.condition.text;
 
-            document.getElementById('temperatura').textContent = temperatura;
-            document.getElementById('humedad').textContent = humedad;
-            document.getElementById('condiciones').textContent = condiciones;
+            document.getElementById('ubicacion').textContent = `${ubicacion}`;
+            document.getElementById('zona').textContent = `${zona}`;
+            document.getElementById('temperatura').textContent = `${temperatura}`;
+            document.getElementById('humedad').textContent = `${humedad}`;
+            document.getElementById('condiciones').textContent = `${condiciones}`;
         })
         .catch(error => console.error('Error al obtener los datos meteorológicos:', error));
 });
+
+
+const horasPrevision = 7;
+
+  function actualizarPrevisonPorHoras() {
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&days=7&lang=es`)
+    .then(response => response.json())
+    .then(data => {
+      const prevision = data.forecast.forecastday[0].hour;
+      const ahora = new Date().getHours();
+      const proximasHoras = prevision.slice(ahora, ahora + horasPrevision).filter(h => h);
+      let html = '';
+      
+      
+    proximasHoras.forEach(hora => {
+      const horaLocal = hora.time.split(' ')[1];
+      const iconos = `https:${hora.condition.icon}`;
+      const temp = hora.temp_c;
+      const texto = hora.condition.text;
+        
+        
+        html += `<div class="container-prevision">
+        <div><strong>${horaLocal}</strong></div>
+        <img src="${iconos}" alt="${texto}">
+        <div>${temp}°C</div>
+        <div>${texto}</div>
+        </div>
+        `;
+      });
+      document.getElementById('prevision-horas').innerHTML = html;
+    })
+    .catch(error => console.error('Error al obtener la previsión horaria:', error));
+  }
+  
+  actualizarPrevisonPorHoras();
