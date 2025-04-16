@@ -38,14 +38,18 @@ const horasPrevision = 7;
       let html = '';
       
       
-    proximasHoras.forEach(hora => {
+      proximasHoras.forEach(hora => {
+      const ahora = new Date().getHours();
+      const horaActual = ahora < 10 ? '0' + ahora : ahora.toString();
       const horaLocal = hora.time.split(' ')[1];
+      const horaComparar = horaLocal.split(':')[0];
       const iconos = `https:${hora.condition.icon}`;
       const temp = hora.temp_c;
       const texto = hora.condition.text;
-        
-        
-        html += `<div class="container-prevision">
+      const esHoraActual = parseInt(horaActual) === parseInt(horaComparar);
+     
+      
+        html += `<div class="container-prevision${esHoraActual ? ' actual' : ''}">
         <div><strong>${horaLocal}</strong></div>
         <img src="${iconos}" alt="${texto}">
         <div>${temp}°C</div>
@@ -57,5 +61,5 @@ const horasPrevision = 7;
     })
     .catch(error => console.error('Error al obtener la previsión horaria:', error));
   }
-  
+
   actualizarPrevisonPorHoras();

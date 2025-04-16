@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <main id="contenedor-gral">
     <section id="reloj-fechayhora">
         <div class="fecha">
             <p id="dia"></p>
@@ -33,38 +34,6 @@
     </section>
 
 
-    <section id="el-tiempo">
-      <div class="localizacion"> 
-        <p>Mi ubicación</p>
-        <h1 id="ubicacion"></h1>
-        <p id="zona"></p>
-      </div>
-        <div class="container-tiempo">
-            <p>Temperatura: <span id="temperatura"></span>°C</p>
-            <p>Humedad: <span id="humedad"></span>%</p>
-            <p>Condiciones: <span id="condiciones"></span></p>
-        </div>
-        <p>Pronostico para las próximas horas</p>
-        <div id="prevision-horas" class="container-prevision"></div>
-    </section>
-
-
-    <section id="mi-lista-links">
-        <div id="links-favoritos">
-            <h2>Añadí tu enlace de interes🔗</h2>
-            <form>
-                <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
-                <br><br>
-                <input type="url" id="url" placeholder="Pega la URL"/>
-                <br><br>
-            </form>
-            <button id="añadir-enlace">Añadir enlace</button>
-            <ul id="link-lista"></ul>
-            <button class="eliminar"></button>
-        </div>
-    </section>
-
-
     <section>
         <div class="container-gral" id="container-gral">
         <h2>Crea tu contraseña segura🔒</h2>
@@ -84,19 +53,54 @@
             <div class="contraseña-generada">
                 <span id="contraseña-generada" class="contraseña-exitosa"></span>
             </div>
-
-        <button id="btn-generador">Generar contraseña</button>
-
+            
+            <button id="btn-generador">Generar contraseña</button>
+            
         </div>
     </section>
     
-   <footer>
+    <section id="el-tiempo">
+      <div class="localizacion"> 
+        <p>Mi ubicación</p>
+        <h1 id="ubicacion"></h1>
+        <p id="zona"></p>
+      </div>
+    <div class="container-tiempo">
+        <span id="picture">x</span>
+        <span id="temperatura"></span>
+        <span id="humedad">%</span>
+        <span id="condiciones"></span>
+    </div>
+    <p>Pronostico para las próximas horas</p>
+    <div id="prevision-horas" class="container-prevision"></div>
+    </section>
+
+
+    <section id="mi-lista-links">
+        <div id="links-favoritos">
+            <h2>Añadí tu enlace de interes🔗</h2>
+            <form>
+                <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
+                <br><br>
+                <input type="url" id="url" placeholder="Pega la URL"/>
+                <br><br>
+            </form>
+            <button id="añadir-enlace">Añadir enlace</button>
+            <ul id="link-lista"></ul>
+            <button class="eliminar"></button>
+        </div>
+    </section>
+
+
+</main>
+<footer>
     <ul>
         <li><a href="#" id="fecha-hora">🕐</a></li>
         <li><a href="#" id="list-link">🔗</a></li>
         <li><a href="#" id="password">🔒</a></li>
         <li><a href="#" id="clima">☁️</a></li>
     </ul>
+    
 </footer>
 <hr>
    <script src="./JS/elTiempo.js"></script>

@@ -23,11 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
-
-  
+ 
 body {
-    font-family: "Lexend Tera", sans-serif;
+    font-family:'Poppins', sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -38,6 +36,21 @@ body {
     background-repeat: no-repeat;
     transition: all 1s ease;
   }
+
+
+#contenedor-gral {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+      
+}
+
+#reloj-fechayhora {
+    justify-content: flex-star;
+    margin-top: 30px;
+    
+}
 
 .fecha {
     display: flex;
@@ -67,18 +80,35 @@ body {
 
 }
 
+
+
 #el-tiempo {
-    background-color: red;
+    background-color: rgba(128, 128, 128, 0.304);
+    display: flex;
+    overflow-x: scroll;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 600px;
+    height: 250px;
+    
+}
+.localizacion {
+    width: 200px;
+    color: white;
+    text-align: start;
+    margin-top: 5px;
+    margin-right: 9px;
     
 }
 #ubicacion {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 500;
 }
+#zona {
+    font-size: 25px;
+}
+
 .container-tiempo {
     background-color: blue;
     display: flex;
@@ -86,13 +116,29 @@ body {
 }
 
 .container-prevision {
-    background-color: yellow;
+    background-color: transparent;
     display: flex;
-    flex-wrap: row-nowrap;
-    width: 400px;
+    text-align: center;
+    align-content: center;
+    width: 90px;
     box-sizing: border-box;
-    align-self: flex-start;
+    gap:10px;
+    
 }
+#temperatura, #humedad, #condiciones {
+    color:yellow;
+
+}
+.container-tiempo {
+    color: violet;
+}
+    
+    
+
+
+
+
+
 #links-favoritos {
     padding: 20px;
     border-radius: 10px;
