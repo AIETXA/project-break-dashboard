@@ -1,0 +1,97 @@
+/*CONTRASEÑA*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh; 
+    position: relative;
+}
+
+
+header {
+    align-items: flex-start;
+    width: 30px;
+    height: 30px;
+    border: 1.5px black solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgba(201, 249, 245, 0.196);
+    margin: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+header img {
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    
+}
+
+h2 {
+    font-size: 20px;
+}
+section {
+    font-family:'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: transparent;
+   
+    border-radius: 10px;
+    width: 500px;
+    color: white;
+}
+
+/*reloj*/
+.fecha-reloj {
+    font-family:'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 500px;
+    color: white;
+    border: 1px solid white;
+}
+
+#frases {
+    color: #609ac5;
+    font-weight: bold;
+    
+
+}

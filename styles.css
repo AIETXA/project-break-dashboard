@@ -37,6 +37,27 @@ body {
     transition: all 1s ease;
   }
 
+header {
+      width: 30px;
+      height: 30px;
+      border: 1.5px black solid;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px black;
+      background-color: rgba(201, 249, 245, 0.196);
+      margin: 20px;
+      padding: 10px;
+  
+  }
+  
+header img {
+    
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    
+  
+}
+/*bien*/
 
 #contenedor-gral {
     display: flex;
@@ -149,15 +170,23 @@ body {
     
 
 }
-
+/*CONTRASEÑA*/
 .container-gral {
+    background-color: transparent;
+    margin-top: 15px ;
+    line-height: 1em;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
+    margin-bottom: 2px;
+    gap: 10px;
+    justify-content: center;
+    font-size: 25px;
 }
 
 section {
+    
     color: rgb(68, 66, 66);
     display: flex;
     flex-direction: column;
@@ -168,40 +197,21 @@ section {
     padding-bottom: 15px;
 }
 
-header {
-    width: 100px;
-    border: 1.5px black solid;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px black;
-    background-color: rgba(201, 249, 245, 0.363);
-    margin: 20px;
-    padding: 10px;
-
-}
-
-header a {
-    color: rgb(124, 126, 126);
-    text-decoration: none;
-    letter-spacing: .5px;
-}
-
 #anchor-pass {
-    width: 35px;
-    height: 25px;
+    border: 1px solid #609ac5;
+    width: 40px;
+    height: 30px;
     margin: 3px;
     padding: 3px;
-
 }
 
 div #check {
-display: flex;
-flex-direction: row;
-font-size: 18px;
-justify-content: center;
-padding-top: 15px;
-gap: 8px;
-
-
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 8px;
 }
 
 div .contraseña-generada {
@@ -210,13 +220,14 @@ div .contraseña-generada {
     align-content: center;
     margin: 15px;
     padding: 25px;
-    border: 2px white solid;
+    border: 1px #adbdde3d solid;
     border-radius: 9px;
 
 }
 
 .contraseña-exitosa {
-    color: white;
+    background-color: #609ac5;
+    color:white;
     font-weight: bolder;
     font-size: 25px;
 }
@@ -226,15 +237,14 @@ div .contraseña-generada {
 }
 
 #btn-generador {
-    padding: 10px;
-    margin-top: 8px;
-    background-color: #8896a0a4;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #adbddebe;
     border-radius: 3px;
     font-size: 18px;
     box-shadow: 3px 3px 3px black;
-    
-
 }
+
 ul {
     display: flex;
     gap: 50px;
