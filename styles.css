@@ -85,6 +85,7 @@ header img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
     font-size: 25px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .reloj {
@@ -98,7 +99,7 @@ header img {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
-
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -114,6 +115,10 @@ header img {
     height: 250px;
     
 }
+
+
+/*bien-no tocar mas*/
+
 .localizacion {
     width: 200px;
     color: white;
@@ -155,11 +160,6 @@ header img {
 }
     
     
-
-
-
-
-
 #links-favoritos {
     padding: 20px;
     border-radius: 10px;
@@ -245,6 +245,8 @@ div .contraseña-generada {
     box-shadow: 3px 3px 3px black;
 }
 
+/*no tocar-ok*/
+
 ul {
     display: flex;
     gap: 50px;
@@ -258,6 +260,7 @@ li a {
 }
 
 footer {
+    
     position: fixed;
     display: flex;
     flex-direction: row-reverse;
@@ -266,8 +269,14 @@ footer {
     bottom: 0;    
     
 }
+footer img {
+    width: 28px;
+    height: 28px;
+    right: 0;
+}
 
 hr {
+    color: #000;
     position: absolute;
     right: 0;
     width: 60%;

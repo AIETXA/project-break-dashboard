@@ -47,7 +47,7 @@ header {
     top: 0;
     left: 0;
     padding: 10px;
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.781);
 }
 
 header img {
@@ -59,8 +59,10 @@ header img {
 
 h2 {
     font-size: 20px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 section {
+    
     font-family:'Poppins', sans-serif;
     position: absolute;
     top: 50%;
@@ -68,13 +70,45 @@ section {
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: transparent;
-   
     border-radius: 10px;
     width: 500px;
     color: white;
 }
+.container-gral {
+    border: 1px solid lightblue;
+}
 
+.container-gral h2 {
+    font-size: 35px;
+}
+
+.character-selector {
+    font-size: 20px;
+    margin-top: 18px;
+}
+.check-label {
+    font-size: 22px;
+}
+#checkbox1 {
+    width: 15px;
+    height: 15px;
+    
+}
+#checkbox2 {
+    
+    width: 15px;
+    height: 15px;
+}
 /*reloj*/
+
+.fecha {
+    box-shadow: none;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.reloj {
+    box-shadow: none;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
 .fecha-reloj {
     font-family:'Poppins', sans-serif;
     position: absolute;
@@ -82,16 +116,52 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: transparent;
     border-radius: 10px;
     width: 500px;
     color: white;
     border: 1px solid white;
+    
 }
 
 #frases {
-    color: #609ac5;
+    color: #8eafc7;
+    text-shadow: 2px 2px 2px black;
     font-weight: bold;
-    
+    letter-spacing: 3px;
+    text-decoration-color: black;
+}
 
+/*footer*/
+ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    
+}
+
+li a {
+    text-decoration: none;
+    
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 70px;
+    width: 60%;
+    
+}
+footer img {
+    width: 28px;
+    height: 28px;
+    right: 0;
+}
+
+hr {
+    color: #000;
+    position: absolute;
+    right: 0;
+    width: 60%;
+    bottom: 10px;    
 }
