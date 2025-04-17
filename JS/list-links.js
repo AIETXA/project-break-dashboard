@@ -14,6 +14,7 @@ const btnAñadirEnlace = document.getElementById("añadir-enlace");
 const eliminar = document.querySelector('eliminar');
 let nombreUrl = document.getElementById("name-url");
 let direccionUrl = document.getElementById("url");
+let cajaLinksAgregados = document.getElementById('caja-links');
 
 
 window.addEventListener("DOMContentLoaded", mostrarLinksGuardados);

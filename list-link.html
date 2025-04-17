@@ -10,13 +10,14 @@
 <body>
     
     <header>
-        <a href="Index.html"></a>
-        <img src="iconos/casa.png"></a>
+        <a href="Index.html">
+        <img src="iconos/casa.png">
+        </a>
     </header>
 
     <section>
         <div id="links-favoritos">
-            <h2>Añadí tu enlace de interes🔗</h2>
+            <h2 id="titulo-link">Añadí tu enlace de interes<img src="iconos/enlace.png"></h2>
             <form>
                 <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
                 <br><br>
@@ -24,20 +25,20 @@
                  <br><br>
             </form>
             <button id="añadir-enlace">Añadir enlace</button>
-            <ul id="link-lista"></ul>
-            <button class="eliminar"></button>
         </div>
+            <br>
+            <ul id="link-lista">
+
+            </ul>
+            
     </section>
 
     <footer>
         <ul>
-            <li><a href="#" id="fecha-hora">
+            <li><a href="fecha-hora.html" id="fecha-hora">
                 <img src="iconos/nube.png" alt="nube" _mstalt="62738" _msthash="10">
             </a></li>
-            <li><a href="#" id="list-link">
-                <img src="iconos/enlace.png" alt="enlace" _mstalt="62738" _msthash="10">
-            </a></li>
-            <li><a href="#" id="password">
+            <li><a href="password.html" id="password">
                 <img src="iconos/candado.png" alt="candado" _mstalt="62738" _msthash="10">
             </a></li>
             <li><a href="#" id="clima">
@@ -46,6 +47,7 @@
         </ul>
         
     </footer>
+    <hr>
     <script src="./JS/list-links.js"></script>  
 </body>
 </html>

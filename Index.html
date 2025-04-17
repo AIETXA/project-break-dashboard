@@ -30,9 +30,28 @@
             <p id="segundos"></p>
         </div>
     </section>
-
-
     <section>
+        <div class="container-gral" id="container-gral">
+        <h2>Crea tu contraseña segura<img src="iconos/candado.png"></h2>
+            <div class="character-selector">
+                <label for="anchor-pass" class="form-label">Número de caracteres</label>
+                <input type="number" id="anchor-pass" class="form-control" min="12" max="50">
+            </div>
+            <div id="check">
+                <input type="checkbox" id="checkbox1">
+                <label class="check-label" for="checkbox1">Incluir números</label>
+                <input type="checkbox" id="checkbox2">
+                <label class="check-label" for="checkbox2">Incluir símbolos</label>
+            </div>
+            <div class="contraseña-generada">
+            <span id="contraseña-generada" class="contraseña-exitosa"></span>
+            </div> 
+            
+            <button id="btn-generador">Generar contraseña</button>
+        </div>
+    </section>
+
+    <!-- <section>
         <div class="container-gral" id="container-gral">
         <h2>Crea tu contraseña segura <img src="iconos/candado.png"></h2>
             <div class="character-selector">
@@ -55,7 +74,7 @@
             <button id="btn-generador">Generar contraseña</button>
             
         </div>
-    </section>
+    </section> -->
     
     <section id="el-tiempo">
       <div class="localizacion"> 
@@ -76,7 +95,7 @@
 
     <section id="mi-lista-links">
         <div id="links-favoritos">
-            <h2>Añadí tu enlace de interes🔗</h2>
+            <h2>Añadí tu enlace de interes <img src="iconos/enlace.png"></h2>
             <form>
                 <input type="text" id="name-url" placeholder="Nombre de tu enlace"/>
                 <br><br>
@@ -84,22 +103,25 @@
                 <br><br>
             </form>
             <button id="añadir-enlace">Añadir enlace</button>
-            <ul id="link-lista"></ul>
-            <button class="eliminar"></button>
+            
         </div>
+        <br>
+        <ul id="link-lista">
+
+        </ul>
     </section>
 
 
 </main>
 <footer>
     <ul>
-        <li><a href="#" id="fecha-hora">
+        <li><a href="fecha-hora.html" id="fecha-hora">
             <img src="iconos/reloj.png" alt="nube" _mstalt="62738" _msthash="10">
         </a></li>
         <li><a href="#" id="list-link">
             <img src="iconos/enlace.png" alt="enlace" _mstalt="62738" _msthash="10">
         </a></li>
-        <li><a href="#" id="password">
+        <li><a href="password.html" id="password">
             <img src="iconos/candado.png" alt="candado" _mstalt="62738" _msthash="10">
         </a></li>
         <li><a href="#" id="clima">

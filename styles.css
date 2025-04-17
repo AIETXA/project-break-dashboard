@@ -36,7 +36,7 @@ body {
     background-repeat: no-repeat;
     transition: all 1s ease;
   }
-
+/*inicio*/
 header {
       width: 30px;
       height: 30px;
@@ -57,18 +57,18 @@ header img {
     
   
 }
-/*bien*/
 
 #contenedor-gral {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-      
 }
 
+/*reloj*/
 #reloj-fechayhora {
     justify-content: flex-star;
+    background-color: red; 
     margin-top: 30px;
     
 }
@@ -160,16 +160,8 @@ header img {
 }
     
     
-#links-favoritos {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: white;
-    width: 400px;
-    height: 400px;
-    
 
-}
+
 /*CONTRASEÑA*/
 .container-gral {
     background-color: transparent;
@@ -227,7 +219,7 @@ div .contraseña-generada {
 
 .contraseña-exitosa {
     background-color: #609ac5;
-    color:white;
+    color: white;
     font-weight: bolder;
     font-size: 25px;
 }
@@ -237,15 +229,60 @@ div .contraseña-generada {
 }
 
 #btn-generador {
-    padding: 8px;
-    margin-top: 5px;
-    background-color: #adbddebe;
-    border-radius: 3px;
-    font-size: 18px;
-    box-shadow: 3px 3px 3px black;
+    flex-wrap: wrap;
+    height: 80px;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #609ac5;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+   
+    
+   
 }
+#btn-generador:disabled {
+    pointer-events: none;
+  }
+  
+  #btn-generador:hover {
+    color: #fff;
+    background-color: #609ac5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  #btn-generador:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+ 
+.contraseña-exitosa {
+        background-color: #609ac5;
+        color:white;
+        font-weight: bolder;
+        font-size: 25px;
+    }  
 
-/*no tocar-ok*/
+/*footer*/
 
 ul {
     display: flex;
@@ -260,7 +297,6 @@ li a {
 }
 
 footer {
-    
     position: fixed;
     display: flex;
     flex-direction: row-reverse;
@@ -276,9 +312,167 @@ footer img {
 }
 
 hr {
-    color: #000;
+    color:#609ac5;
     position: absolute;
     right: 0;
     width: 60%;
     bottom: 0;    
 }
+
+
+/*links*/
+#links-favoritos {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 500px;
+    height: 130px;
+    position: relative; 
+    transform: translate(-55px, -20px);
+    
+}
+#links-favoritos h2 {
+    font-size: 25px;
+    width: 100%;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    margin:0px;
+}
+
+#name-url{
+    flex-direction: row-reverse;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0;
+    position: absolute;
+    width: 250px;
+    top: 75px; 
+    left: 40px; 
+}
+#url {
+    flex-direction: row-reverse;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0;
+    position: absolute;
+    width: 250px;
+    top: 105px; 
+    left: 40px; 
+}
+#añadir-enlace {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #609ac5;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+#añadir-enlace:disabled {
+  pointer-events: none;
+}
+
+#añadir-enlace:hover {
+  color: #fff;
+  background-color: #609ac5;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#añadir-enlace:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+input::placeholder {
+    font-size: 15px; 
+    color: #888; 
+  }
+
+
+
+ #link-lista {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    align-content: start;
+    width: 500px;
+    height: 80px;
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+    transform: translate(-230px, 150px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    position: absolute;
+    right: -100px; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#link-lista a {
+    text-decoration: none;
+    color: #000;
+    }
+   
+#link-lista li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  
+  
+
+  /*
+  @media (max-width: 900px) {
+    #index section {
+      flex-direction: column;
+      align-items: center;
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+    section:nth-child(3) {
+      display: none;
+    }
+   
+    .link-lista {
+      margin-bottom: 50px;
+    }
+    #index .link-lista {
+      height: 210px;
+      min-height: auto;
+    }
+    #index .list {
+      margin-top: 0;
+    }
+  */
