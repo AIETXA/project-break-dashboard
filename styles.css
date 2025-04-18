@@ -448,27 +448,4 @@ input::placeholder {
   
   
 
-  /*
-  @media (max-width: 900px) {
-    #index section {
-      flex-direction: column;
-      align-items: center;
-      max-width: 500px;
-      width: 100%;
-      height: auto;
-    }
-    section:nth-child(3) {
-      display: none;
-    }
-   
-    .link-lista {
-      margin-bottom: 50px;
-    }
-    #index .link-lista {
-      height: 210px;
-      min-height: auto;
-    }
-    #index .list {
-      margin-top: 0;
-    }
-  */
+ 
