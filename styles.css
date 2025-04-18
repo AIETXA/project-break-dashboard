@@ -178,7 +178,6 @@ header img {
 }
 
 section {
-    
     color: rgb(68, 66, 66);
     display: flex;
     flex-direction: column;
@@ -206,7 +205,7 @@ div #check {
     gap: 8px;
 }
 
-div .contraseña-generada {
+.contraseña-generada {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -214,14 +213,12 @@ div .contraseña-generada {
     padding: 25px;
     border: 1px #adbdde3d solid;
     border-radius: 9px;
-
+    
 }
 
 .contraseña-exitosa {
     background-color: #609ac5;
-    color: white;
-    font-weight: bolder;
-    font-size: 25px;
+
 }
 .character-selector {
     font-size: 20px;
@@ -255,9 +252,8 @@ div .contraseña-generada {
     -webkit-user-select: none;
     touch-action: manipulation;
    
-    
-   
 }
+
 #btn-generador:disabled {
     pointer-events: none;
   }
@@ -272,15 +268,15 @@ div .contraseña-generada {
   #btn-generador:active {
     box-shadow: none;
     transform: translateY(0);
-  }
-  
- 
-.contraseña-exitosa {
-        background-color: #609ac5;
-        color:white;
-        font-weight: bolder;
-        font-size: 25px;
-    }  
+}
+
+#contraseña-exitosa {
+    color: red;
+}  
+
+
+
+
 
 /*footer*/
 

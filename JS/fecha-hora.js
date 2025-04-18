@@ -80,7 +80,7 @@ setInterval(actualizarReloj, 1000);
  let frasesPum = document.getElementById('frases');
   function frasesMotivadoras() {
      
-    if (hora > 7 && hora <= 12) {
+    if (hora >= 7 && hora <= 12) {
         frasesPum.innerText = ('Buenos días, desayuna fuerte y a darle al código')
     }  
     else if (hora > 12 && hora <= 14) {
