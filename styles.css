@@ -360,7 +360,8 @@ footer {
     flex-direction: row-reverse;
     min-height: 70px;
     width: 60%;
-    bottom: 0;    
+    top: 9px;       
+    right: 9px;     
     
 }
 footer img {
