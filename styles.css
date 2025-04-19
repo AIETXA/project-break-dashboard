@@ -25,9 +25,6 @@ footer, header, hgroup, menu, nav, section {
 }
  
 body {
-    
-    font-size: 90%; 
-
     font-family:'Poppins', sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -40,10 +37,11 @@ body {
     transition: all 1s ease;
     overflow-y: auto;
       
-      
-      
-      
-  }
+}
+
+#contenedor-gral {
+    transform: scale(0.9);
+}
 /*inicio*/
 header {
       width: 30px;
