@@ -35,6 +35,11 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     transition: all 1s ease;
+    overflow-y: auto;
+      
+      
+      
+      
   }
 /*inicio*/
 header {
@@ -68,8 +73,9 @@ header img {
 /*reloj*/
 #reloj-fechayhora {
     justify-content: flex-star;
-    background-color: red; 
-    margin-top: 30px;
+    background-color: transparent; 
+    margin-top: 50px;
+    margin-left: 40px;
     
 }
 
@@ -82,6 +88,7 @@ header img {
     justify-content: center;
     padding: 8px;
     border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.304);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
     font-size: 25px;
@@ -92,7 +99,7 @@ header img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: transparent;
+    background-color: rgba(128, 128, 128, 0.304);
     font-size: 50px;
     font-weight: bold;
     padding: 20px;
@@ -102,22 +109,20 @@ header img {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-
+/*estacion meteorologica*/
 
 #el-tiempo {
     background-color: rgba(128, 128, 128, 0.304);
     display: flex;
-    overflow-x: scroll;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 600px;
-    height: 250px;
-    
+    height: 350px;
+    transform: none;
+    margin: -20px;
+    margin-top: -150px;
 }
-
-
-/*bien-no tocar mas*/
 
 .localizacion {
     width: 200px;
@@ -125,8 +130,8 @@ header img {
     text-align: start;
     margin-top: 5px;
     margin-right: 9px;
-    
 }
+
 #ubicacion {
     font-size: 40px;
     font-weight: 500;
@@ -134,37 +139,87 @@ header img {
 #zona {
     font-size: 25px;
 }
-
-.container-tiempo {
-    background-color: blue;
+    
+.actual-clima {
+   
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 100%;
+    background-color: rgba(96, 153, 197, 0.612);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+  }
+
+#icono-actual {
+    margin-top: -10px;
+    width: 74px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+  }
+
+  .localizacion {
+    margin: 0;
+    font-size: 24px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .container-tiempo {
+    color: #fff;
+    text-align: right;
+    transform: translate(20px);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
+.titulo-prevision {
+    font-size: 18px;
+    margin-left: 0;
+    display: flex;
+    text-align: end;
+    margin: 5px;
+    color: rgba(2, 2, 2, 0.521);
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgba(252, 252, 252, 0.3);
+
+}
+ 
 .container-prevision {
-    background-color: transparent;
-    display: flex;
+    max-width: 100px;          
+    flex-shrink: 0;           
+    background-color: rgba(255, 255, 255, 0.285);
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
-    align-content: center;
-    width: 90px;
-    box-sizing: border-box;
-    gap:10px;
-    
-}
-#temperatura, #humedad, #condiciones {
-    color:yellow;
-
-}
-.container-tiempo {
-    color: violet;
-}
-    
-    
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    max-height: 150px;
+    font-size: 11px;  
+  }
 
 
+
+#prevision-horas {
+    display: flex;
+    flex-direction: row;     
+    overflow-x: auto;         
+    gap: 10px;                 
+    padding: 8px;
+    max-width: 100%;  
+    
+}
+
+.container-prevision img {
+    width: 40px;   
+    height: auto;
+    margin: 0 auto; 
+    display: block;
+  }
+  
+
+  
+ 
 /*CONTRASEÑA*/
 .container-gral {
-    background-color: transparent;
+    background-color: rgba(128, 128, 128, 0.304);
     margin-top: 15px ;
     line-height: 1em;
     padding: 20px;
@@ -172,6 +227,7 @@ header img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
     margin-bottom: 2px;
+    margin-right: 40px;
     gap: 10px;
     justify-content: center;
     font-size: 25px;
@@ -187,6 +243,7 @@ section {
     width: 500px;
     padding-bottom: 15px;
 }
+
 
 #anchor-pass {
     border: 1px solid #609ac5;
@@ -270,9 +327,6 @@ div #check {
     transform: translateY(0);
 }
 
-#contraseña-exitosa {
-    color: red;
-}  
 
 
 
@@ -318,7 +372,7 @@ hr {
 
 /*links*/
 #links-favoritos {
-    background-color: transparent;
+    background-color: rgba(128, 128, 128, 0.304);
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -414,7 +468,7 @@ input::placeholder {
 
 
  #link-lista {
-    background-color: transparent;
+    
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -431,7 +485,7 @@ input::placeholder {
     justify-content: center;
     position: absolute;
     right: -100px; 
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    
 }
 
 #link-lista a {

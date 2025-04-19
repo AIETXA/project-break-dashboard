@@ -55,18 +55,21 @@
 
     
     <section id="el-tiempo">
+     <div class="actual-clima">
       <div class="localizacion"> 
         <p>Mi ubicación</p>
         <h1 id="ubicacion"></h1>
         <p id="zona"></p>
       </div>
+
     <div class="container-tiempo">
-        <span id="picture">x</span>
-        <span id="temperatura"></span>
-        <span id="humedad">%</span>
-        <span id="condiciones"></span>
-    </div>
-    <p>Pronostico para las próximas horas</p>
+        <img id="icono-actual" src="" alt="Icono-clima-actual">
+        <p>Temperatura: <span id="temperatura">--</span>ºC</p>
+        <p>Humedad: <span id="humedad">--</span>%</p>
+        <p>Condiciones: <span id="condiciones">--</span></p>
+      </div>
+     </div>
+    <p class="titulo-prevision">Pronostico para las próximas horas</p>
     <div id="prevision-horas" class="container-prevision"></div>
     </section>
 
@@ -109,11 +112,11 @@
     
 </footer>
 <hr>
-    <script src="script.js"></script>
-   <script src="./JS/elTiempo.js"></script>
-   <script src="./JS/fecha-hora.js"></script>
-   <script src="./JS/list-links.js"></script>
-   <script src="./JS/password.js"></script>
-
+    <script type="module" src="script.js"></script>
+    <script src="./JS/fecha-hora.js"></script>
+    <script src="./JS/list-links.js"></script>
+    <script src="./JS/password.js"></script>
+    <script src="./JS/elTiempo.js"></script>
+    
 </body>
 </html>

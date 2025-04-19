@@ -1,3 +1,6 @@
+
+window.addEventListener("DOMContentLoaded", () => {
+
 const hoy = document.querySelector('fecha');
 const cajaSegundosAmPm = document.querySelector('caja-segundos-ampm');
 const lugar = document.getElementById('zona-horaria');
@@ -18,8 +21,6 @@ const fechaYhora = document.getElementById('fecha-hora');
 
 function imgRandom() {
     fechaYhora.addEventListener('click', () => {
-
-      
         const pagina = Math.floor(Math.random() * imagenesFondo.length);
         document.body.style.backgroundImage = `url('${imagenesFondo[pagina]}')`;
     })
@@ -70,16 +71,20 @@ if (segundos < 10) {
 pMinutos.textContent = minutos;
 pSegundos.textContent = segundos;
  
-};
+frasesMotivadoras(hora);
+
+}
 
 actualizarReloj();
 setInterval(actualizarReloj, 1000);
 
 
 
- let frasesPum = document.getElementById('frases');
-  function frasesMotivadoras() {
-     
+function frasesMotivadoras() {
+      let frasesPum = document.getElementById('frases');
+      
+    if (!frasesPum) return;
+      
     if (hora >= 7 && hora <= 12) {
         frasesPum.innerText = ('Buenos días, desayuna fuerte y a darle al código')
     }  
@@ -102,6 +107,7 @@ setInterval(actualizarReloj, 1000);
         frasesPum.innerText = ('Es hora de descansar. Apaga y sigue mañana')
     }
 }
-frasesMotivadoras();
 actualizarReloj();
 setInterval(actualizarReloj, 1000);
+
+});

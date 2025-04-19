@@ -32,9 +32,14 @@ const horasPrevision = 7;
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&days=7&lang=es`)
     .then(response => response.json())
     .then(data => {
+      const iconoActual = data.current.condition.icon;
+      const iconoActualElement = document.getElementById('icono-actual');
+  if (iconoActualElement) {
+      iconoActualElement.src = `https:${iconoActual}`;
+     }
       const prevision = data.forecast.forecastday[0].hour;
       const ahora = new Date().getHours();
-      const proximasHoras = prevision.slice(ahora, ahora + horasPrevision).filter(h => h);
+      const proximasHoras = prevision.slice(ahora + 1, ahora + 1 + horasPrevision).filter(h => h);
       let html = '';
       
       
@@ -47,7 +52,6 @@ const horasPrevision = 7;
       const temp = hora.temp_c;
       const texto = hora.condition.text;
       const esHoraActual = parseInt(horaActual) === parseInt(horaComparar);
-     
       
         html += `<div class="container-prevision${esHoraActual ? ' actual' : ''}">
         <div><strong>${horaLocal}</strong></div>
@@ -56,7 +60,11 @@ const horasPrevision = 7;
         <div>${texto}</div>
         </div>
         `;
+
+  
+
       });
+     
       document.getElementById('prevision-horas').innerHTML = html;
     })
     .catch(error => console.error('Error al obtener la previsión horaria:', error));
