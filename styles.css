@@ -358,15 +358,15 @@ footer {
     position: fixed;
     display: flex;
     flex-direction: row-reverse;
-    min-height: 70px;
-    width: 60%;
+    min-height: 50px;
+    width: 40%;
     top: 9px;       
     right: 9px;     
     
 }
 footer img {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     right: 0;
 }
 
