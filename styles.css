@@ -110,6 +110,11 @@ header img {
 }
 
 /*estacion meteorologica*/
+#el-tiempo {
+    background-color: rgba(128, 128, 128, 0.304);
+    width: 600px;
+    transform: translateY(-200px);
+}
 
 #el-pronostico-del-tiempo {
     background-color: rgba(128, 128, 128, 0.304);
@@ -117,14 +122,19 @@ header img {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 600px;
+    width: 900px;
     height: 350px;
     transform: none;
     margin: -20px;
     margin-top: -150px;
+    
 }
 
+
 .localizacion {
+    margin: 0;
+    font-size: 24px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     width: 200px;
     color: white;
     text-align: start;
@@ -139,9 +149,9 @@ header img {
 #zona {
     font-size: 25px;
 }
-    
+
 .actual-clima {
-   
+    
     border-radius: 15px;
     padding: 20px;
     max-width: 100%;
@@ -150,21 +160,17 @@ header img {
     align-items: center;
     gap: 20px;
     
-  }
+}
 
 #icono-actual {
     margin-top: -10px;
     width: 74px;
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
-  }
+}
 
-  .localizacion {
-    margin: 0;
-    font-size: 24px;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-  }
 
-  .container-tiempo {
+
+.container-tiempo {
     color: #fff;
     text-align: right;
     transform: translate(20px);
@@ -180,9 +186,9 @@ header img {
     color: rgba(2, 2, 2, 0.521);
     font-weight: bold;
     text-shadow: 3px 3px 3px rgba(252, 252, 252, 0.3);
-
+    
 }
- 
+
 .container-prevision {
     max-width: 100px;          
     flex-shrink: 0;           
@@ -193,7 +199,7 @@ header img {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     max-height: 150px;
     font-size: 11px;  
-  }
+}
 
 
 
@@ -212,10 +218,11 @@ header img {
     height: auto;
     margin: 0 auto; 
     display: block;
-  }
-  
+}
 
-  
+
+
+
  
 /*CONTRASEÑA*/
 .container-gral {

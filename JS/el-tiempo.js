@@ -3,7 +3,7 @@
 
 const apiKey = '22c3d1fc3de64ad5bec60312251504';
 const city = 'Mondragon, Pais Vasco';
-const apiUrl = `https://api.weatherapi.com/v1/current.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&aqi=no&lang=es`;
+const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no&lang=es`;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const horasPrevision = 7;
 
   function actualizarPrevisonPorHoras() {
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&days=7&lang=es`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&lang=es`)
     .then(response => response.json())
     .then(data => {
       const iconoActual = data.current.condition.icon;
