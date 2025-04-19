@@ -3,7 +3,7 @@
 
 const apiKey = '22c3d1fc3de64ad5bec60312251504';
 const city = 'Mondragon, Pais Vasco';
-const apiUrl = `http://api.weatherapi.com/v1/current.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&aqi=no&lang=es`;
+const apiUrl = `https://api.weatherapi.com/v1/current.json?key=22c3d1fc3de64ad5bec60312251504&q=${city}&aqi=no&lang=es`;
 
 
 document.addEventListener('DOMContentLoaded', () => {

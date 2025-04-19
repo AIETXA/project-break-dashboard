@@ -133,7 +133,7 @@ section {
 
 /*estacion meteorologica*/
 
-#el-tiempo {
+#el-pronostico-del-tiempo {
     background-color: rgba(128, 128, 128, 0.304);
     font-family:'Poppins', sans-serif;
     position: absolute;

@@ -111,7 +111,7 @@ header img {
 
 /*estacion meteorologica*/
 
-#el-tiempo {
+#el-pronostico-del-tiempo {
     background-color: rgba(128, 128, 128, 0.304);
     display: flex;
     padding: 20px;
